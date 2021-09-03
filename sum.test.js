@@ -50,4 +50,8 @@ describe("numbers", () => {
     expect(value).toBeLessThan(5);
     expect(value).toBeLessThanOrEqual(5);
   });
+  test("add floats", () => {
+    const value = 0.1 + 0.2;
+    expect(value).toBeCloseTo(0.29999999999999);
+  });
 });
