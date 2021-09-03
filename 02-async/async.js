@@ -8,5 +8,5 @@ const fetchData = async (id) => {
   //   return res;
   return res.data;
 };
-fetchData(1);
+// fetchData(1);
 module.exports = fetchData;
