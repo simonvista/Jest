@@ -32,7 +32,8 @@ describe("animals array", () => {
   });
 });
 describe("test something else", () => {
-  test("true should be truthy", () => {
+  // only() will run for current test case only and skip other test cases
+  test.only("true should be truthy", () => {
     expect(true).toBeTruthy();
   });
 });
