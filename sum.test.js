@@ -55,3 +55,30 @@ describe("numbers", () => {
     expect(value).toBeCloseTo(0.29999999999999);
   });
 });
+describe("strings", () => {
+  test("there is no I in team", () => {
+    expect("team").not.toMatch(/I/);
+  });
+});
+describe("arrays", () => {
+  test("should ", () => {
+    const shoppingList = [
+      "diapers",
+      "kleenex",
+      "trash bags",
+      "papertowels",
+      "milk",
+    ];
+    expect(shoppingList).toContain("milk");
+  });
+});
+function compileCode() {
+  throw new Error("Wrong JDK");
+}
+describe("exceptions", () => {
+  test("code fails as expected ", () => {
+    expect(() => compileCode()).toThrow();
+    expect(() => compileCode()).toThrow(Error);
+    expect(() => compileCode()).toThrow("Wrong JDK");
+  });
+});
