@@ -1,3 +1,4 @@
+// Jest uses "matchers" to let you test values in different ways.
 const sum = require("./sum");
 
 // test or it
@@ -38,5 +39,15 @@ describe("truthy or falsy #3", () => {
     expect(n).toBeFalsy();
     expect(n).not.toBeTruthy();
     expect(n).not.toBeUndefined();
+  });
+});
+describe("numbers", () => {
+  test("two plus two", () => {
+    const value = 2 + 2;
+    expect(value).toBe(4);
+    expect(value).toBeGreaterThan(3);
+    expect(value).toBeGreaterThanOrEqual(4);
+    expect(value).toBeLessThan(5);
+    expect(value).toBeLessThanOrEqual(5);
   });
 });
